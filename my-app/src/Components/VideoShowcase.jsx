@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../assets/css/VideoShowcase.css";
 import video1 from "../assets/img/6B4EACEC79664549E10A09A25D1C1293_video_dashinit.mp4";
+
 const VideoShowcase = () => {
   const [videos, setVideos] = useState([
     {
@@ -40,6 +41,8 @@ const VideoShowcase = () => {
     line2: "A completely new outcome"
   });
 
+  const [isMainPlaying, setIsMainPlaying] = useState(false);
+
   const mainVideoRef = useRef(null);
   const sideVideoRefs = useRef([]);
 
@@ -50,22 +53,28 @@ const VideoShowcase = () => {
     newList[index] = mainVideo;
     setVideos(newList);
     setMainVideo(clicked);
+    setIsMainPlaying(false);
 
-    // reset main video to start and play
     setTimeout(() => {
       if (mainVideoRef.current) {
         mainVideoRef.current.pause();
         mainVideoRef.current.currentTime = 0;
-        mainVideoRef.current.play();
       }
     }, 50);
   };
 
   // When main video plays → pause all side videos
   const handleMainPlay = () => {
+    setIsMainPlaying(true);
     sideVideoRefs.current.forEach((v) => {
       if (v) v.pause();
     });
+  };
+
+  // Smooth scroll funksiyasi
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -76,16 +85,31 @@ const VideoShowcase = () => {
         cras consectetur.
       </p>
 
-      <div className="container">
+      <div className="container" id="video">
         {/* MAIN VIDEO */}
         <div className="main-video">
           <video
             ref={mainVideoRef}
             src={mainVideo.src}
             className="main-video-player"
-            controls
+            controls={isMainPlaying}
+            onClick={() => {
+              if (!isMainPlaying && mainVideoRef.current) {
+                mainVideoRef.current.play();
+              }
+            }}
             onPlay={handleMainPlay}
           />
+          {!isMainPlaying && (
+            <div
+              className="main-play-overlay"
+              onClick={() => {
+                if (mainVideoRef.current) mainVideoRef.current.play();
+              }}
+            >
+              ▶
+            </div>
+          )}
         </div>
 
         {/* SIDE VIDEOS */}
@@ -112,8 +136,18 @@ const VideoShowcase = () => {
 
       {/* BUTTONS */}
       <div className="actions">
-        <button className="btn dark">Join the Waitlist</button>
-        <button className="btn light">Buy the $TOKEN</button>
+        <button
+          className="btn dark"
+          onClick={() => scrollToSection("waitlist")}
+        >
+          Join the Waitlist
+        </button>
+        <button
+          className="btn light"
+          onClick={() => scrollToSection("buy-section")}
+        >
+          Buy the $TOKEN
+        </button>
       </div>
     </div>
   );

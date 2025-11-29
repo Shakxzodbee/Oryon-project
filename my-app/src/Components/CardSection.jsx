@@ -12,7 +12,7 @@ const CardSection = () => {
   ];
 
   return (
-    <div className="section">
+    <div className="section" id="about">
       <h2 className="main-title">
         Company is bringing the<br />
         $2.5T stock lending<br />

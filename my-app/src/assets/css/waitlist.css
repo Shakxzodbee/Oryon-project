@@ -134,13 +134,88 @@
   color: #222;
 }
 
-/* Responsive */
-@media (max-width: 850px) {
-  .coin {
-    display: none;
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+  .waitlist-box {
+    width: 90%;
+    padding: 50px 30px;
+  }
+
+  .waitlist-box h1 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .waitlist-box {
+    padding: 40px 25px;
+  }
+
+  .waitlist-box h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .subscribe-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .avatars img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .coin-left, .coin-right {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .waitlist-wrapper {
+    padding: 80px 15px 60px;
   }
 
   .waitlist-box {
     width: 100%;
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .waitlist-box h1 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+
+  .form-box {
+    max-width: 100%;
+  }
+
+  .coin {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .waitlist-box h1 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .subscribe-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .input-wrapper input {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .input-wrapper label {
+    font-size: 14px;
   }
 }

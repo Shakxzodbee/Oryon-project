@@ -4,7 +4,7 @@ import stats1 from "../assets/img/stats2.png";
 import stats2 from "../assets/img/stats1.png";
 const StatsSection = () => {
   return (
-    <div className="stats-wrapper">
+    <div className="stats-wrapper" id="how">
       <h1 className="stats-title">We Are a Best Trading Provider</h1>
       <p className="stats-subtitle">
         Lorem ipsum mauris ullamcorper neque eu semper commodo vitae faucibus nec

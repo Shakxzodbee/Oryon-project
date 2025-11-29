@@ -5,7 +5,6 @@
   padding: 70px 20px;
   text-align: center;
   font-family: "Inter", sans-serif;
-  height: 687px;
 }
 
 /* Title */
@@ -61,10 +60,9 @@
   color: rgba(249, 249, 249, 1);
   opacity: 0.6;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   letter-spacing: 0.5px;
   font-weight: 400;
-  margin-bottom: 14px;
 }
 
 .stats-card p {
@@ -78,11 +76,10 @@
 .card-icon {
   width: 60px;
   height: 60px;
-background: none;
+  background: none;
   border-radius: 50%;
   position: absolute;
   top: -25px;
-  /* box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4); */
 }
 
 /* Left card icon */
@@ -97,10 +94,104 @@ background: none;
 
 /* Right card icon */
 .right-icon {
-  position: absolute; /* rasmni card ustiga chiqaradi */
-  top: -80px; /* yuqoriga siljitish */
-  right: 0px; /* o'ngga siljitish */
-  z-index: 10; /* boshqa elementlar ustida bo'lishi uchun */
-  width: 80px; /* kerak bo'lsa o'lchamini o'zgartirish */
+  position: absolute;
+  top: -80px;
+  right: 0px;
+  z-index: 10;
+  width: 80px;
   height: 80px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+  .stats-wrapper {
+    padding: 60px 15px;
+  }
+
+  .stats-title {
+    font-size: 48px;
+  }
+
+  .stats-subtitle {
+    font-size: 15px;
+    max-width: 500px;
+    margin-bottom: 60px;
+  }
+
+  .stats-card {
+    width: 280px;
+    height: 310px;
+  }
+}
+
+@media (max-width: 992px) {
+  .stats-cards {
+    gap: 20px;
+  }
+
+  .stats-card {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .left-icon,
+  .right-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .left-icon,
+  .right-icon {
+    display: none;
+  }
+
+  .stats-title {
+    font-size: 36px;
+  }
+
+  .stats-subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-card {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .left-icon,
+  .right-icon {
+    width: 50px;
+    height: 50px;
+    top: -10px;
+    left: auto;
+    right: auto;
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-title {
+    font-size: 28px;
+  }
+
+  .stats-subtitle {
+    font-size: 13px;
+  }
+
+  .stats-card {
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    height: auto;
+  }
 }

@@ -46,7 +46,7 @@ export default function Waitlist() {
   };
 
   return (
-    <section className="waitlist-wrapper">
+    <section className="waitlist-wrapper" id="waitlist">
       <img src={CoinLeft} className="coin coin-left" alt="token" />
       <img src={CoinRight} className="coin coin-right" alt="token" />
 

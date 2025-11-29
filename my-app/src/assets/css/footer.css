@@ -1,6 +1,7 @@
 .footer {
   padding: 60px 20px 30px;
   text-align: center;
+  background-color: #f8f8f8; /* agar fon kerak bo'lsa */
 }
 
 .footer-top {
@@ -29,6 +30,8 @@
   display: flex;
   gap: 25px;
   font-size: 16px;
+  flex-wrap: wrap;
+  justify-content: center; /* mobilda markazlash */
 }
 
 .footer-links a {
@@ -44,6 +47,7 @@
 .footer-socials {
   display: flex;
   gap: 15px;
+  justify-content: center; /* mobilda markazlash */
 }
 
 .footer-socials .icon {
@@ -60,13 +64,37 @@
   margin-top: 25px;
   font-size: 14px;
   opacity: 0.6;
-  margin-left: 100px;
+  text-align: center;
+  margin-left: 0;
 }
 
 /* Responsive */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .footer-top {
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+  }
+  .footer-left img {
+  margin-left: 100px;
+}
+}
+
+@media (max-width: 600px) {
+  .footer-left {
+    font-size: 18px;
+  }
+
+  .footer-links {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .footer-socials .icon {
+    font-size: 20px;
+  }
+
+  .footer {
+    padding: 40px 15px 20px;
   }
 }

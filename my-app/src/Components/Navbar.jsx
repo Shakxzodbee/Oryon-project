@@ -1,45 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../assets/css/Navbar.css";
 import "../assets/css/herocard.css";
 import Logo from "../assets/img/logo.png";
-import vectorbtn from "../assets/img/vector-btn.png"
-export default function Navbar() {
+import vectorbtn from "../assets/img/vector-btn.png";
 
-  // SCROLL FUNCTION
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  // Navbar scroll holati
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) setScrolled(true);
+      else setScrolled(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scroll to section with offset for fixed navbar
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -80; // Navbar height
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
-  // BUY ORYON BUTTON
-  const handleBuy = () => {
-    window.open("https://example.com/buy-oryon", "_blank");
-  };
+  const handleBuy = () => window.open("https://example.com/buy-oryon", "_blank");
 
-  // JOIN WAITLIST BUTTON
-  const handleJoinWaitlist = () => {
-    window.location.href = "/waitlist";
-  };
-
-  // TOP BANNER CLICK
-  const handleBannerClick = () => {
-    window.location.href = "/referral-bonus"; // o‘zingiz xohlagan link
-  };
+  const handleBannerClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <div className="high-div">
-      <header className="header-container">
-
-        {/* CLICKABLE TOP BANNER */}
+      <header className={`header-container ${scrolled ? "scrolled" : ""}`}>
         <div className="top-banner" onClick={handleBannerClick}>
           LAUNCHING SOON! UP TO 10% REFERRAL BONUS
         </div>
 
         <nav className="navbar">
           <div className="nav-left">
-            <img style={{ width: "134px", height: "41px" }} src={Logo} alt="Oryon Logo" className="logo" />
+            <img
+              style={{ width: "134px", height: "41px" }}
+              src={Logo}
+              alt="Oryon Logo"
+              className="logo"
+            />
           </div>
 
           <ul className="nav-links">
@@ -49,11 +55,16 @@ export default function Navbar() {
           </ul>
 
           <div className="nav-right">
-            <button className="btn-outline" onClick={handleBuy}>Buy $ORYON</button>
-            <button className="btn-primary" onClick={handleJoinWaitlist}>Join the Waitlist</button>
+            <button className="btn-outline" onClick={handleBuy}>
+              Buy $ORYON
+            </button>
+            <button className="btn-primary" onClick={() => scrollToSection("waitlist")}>
+              Join the Waitlist
+            </button>
           </div>
         </nav>
       </header>
+
       <section className="hero-wrapper">
         <div className="hero-content">
           <div className="hero-tags">
@@ -61,12 +72,27 @@ export default function Navbar() {
             <span className="tag">GET UP 10% BONUS</span>
           </div>
 
-          <h1 className="hero-title">Redefining how<br />stocks work for you</h1>
+          <h1 className="hero-title">
+            Redefining how
+            <br />
+            stocks work for you
+          </h1>
           <p className="hero-sub">Transforming stock markets into yield engines.</p>
 
           <div className="hero-buttons">
-            <button style={{background: "#FFFFFF" , color: "#1A1B1F" , borderRadius: "16px"}} className="primary-btn">Join the Waitlist</button>
-            <button style={{borderRadius: "16px"}} className="secondary-btn">Watch the Story 
+            <button
+              style={{ background: "#FFFFFF", color: "#1A1B1F", borderRadius: "16px" }}
+              className="primary-btn"
+              onClick={() => scrollToSection("waitlist")}
+            >
+              Join the Waitlist
+            </button>
+            <button
+              style={{ borderRadius: "16px" }}
+              className="secondary-btn"
+              onClick={() => scrollToSection("video")}
+            >
+              Watch the Story
               <img className="vector-btn" src={vectorbtn} alt="" />
             </button>
           </div>
