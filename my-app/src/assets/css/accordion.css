@@ -3,6 +3,8 @@
   border-radius: 10px;
   overflow: hidden;
   background: #fff;
+  transition: .5s all ease;
+
 }
 
 .acc-header {
@@ -16,11 +18,15 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  transition: .5s all ease;
+
 }
 
 .acc-body {
   padding: 18px;
   color: #555;
+
+  transition: .5s all ease;
   line-height: 1.6;
 }
 

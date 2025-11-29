@@ -3,12 +3,12 @@ import "../assets/css/CardSection.css";
 import adminDashboardImage from "../assets/img/admin-panel.png";
 const CardSection = () => {
   const cards = [
-    { id: 1, title: "$110T", subtitle: "GLOBAL STOCK MARKET CAP" },
-    { id: 2, title: "$110T", subtitle: "GLOBAL STOCK MARKET CAP", active: true },
-    { id: 3, title: "$110T", subtitle: "GLOBAL STOCK MARKET CAP" },
-    { id: 4, title: "$110T", subtitle: "GLOBAL STOCK MARKET CAP" },
-    { id: 5, title: "$110T", subtitle: "GLOBAL STOCK MARKET CAP" },
-    { id: 6, title: "$110T", subtitle: "GLOBAL STOCK MARKET CAP" },
+    { id: 1, title: "$110T", name: "GLOBAL STOCK MARKET CAP", subtitle: "GLOBAL STOCK MARKET CAP" },
+    { id: 2, title: "$110T", name: "GLOBAL STOCK MARKET CAP", subtitle: "GLOBAL STOCK MARKET CAP", active: true },
+    { id: 3, title: "$110T", name: "GLOBAL STOCK MARKET CAP", subtitle: "GLOBAL STOCK MARKET CAP" },
+    { id: 4, title: "$110T", name: "GLOBAL STOCK MARKET CAP", subtitle: "GLOBAL STOCK MARKET CAP" },
+    { id: 5, title: "$110T", name: "GLOBAL STOCK MARKET CAP", subtitle: "GLOBAL STOCK MARKET CAP" },
+    { id: 6, title: "$110T", name: "GLOBAL STOCK MARKET CAP", subtitle: "GLOBAL STOCK MARKET CAP" },
   ];
 
   return (
@@ -26,7 +26,8 @@ const CardSection = () => {
             className={`card ${card.active ? "active" : ""}`}
           >
             <div className="card-title">{card.title}</div>
-            <div className="card-subtitle">The world's most popular asset class</div>
+            <div className="card-name">{card.name}</div>
+            <div className="card-subtitle">The world's most <br /> popular asset class</div>
           </div>
         ))}
       </div>
@@ -35,7 +36,7 @@ const CardSection = () => {
         Trading on Stocks(?) Market
       </h3>
       <p className="section-subtitle">
-        Lorem ipsum sit sed eros orci in pellentesque id amet porta lobortis turpis cras consectetur.
+        Lorem ipsum sit sed eros orci in pellentesque <br /> id amet porta lobortis turpis cras consectetur.
       </p>
 
       <div className="image-wrapper">
