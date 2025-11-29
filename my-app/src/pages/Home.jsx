@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import CookieCard from "../Components/CookieCard";
 import VideoShowcase from "../Components/VideoShowcase";
 import CardSection from "../Components/CardSection";
-// import HeroStats from "../components/HeroStats";
+import StateseSection from "../Components/StatsSection";
 import Ecosystem from "../components/Ecosystem";
 import FAQ from "../components/FAQ";
 import Waitlist from "../Components/Waitlist";
@@ -14,7 +14,7 @@ export default function Home() {
       <CookieCard />
       <VideoShowcase />
       <CardSection />
-      {/* <HeroStats /> */}
+      <StateseSection />
       <Ecosystem />
       <FAQ />
       <Waitlist />
