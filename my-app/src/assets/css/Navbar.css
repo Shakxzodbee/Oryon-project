@@ -18,17 +18,17 @@
   width: 100%;
   color: white;
   text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  letter-spacing: 0.5px;
+  padding: 10px;
+  font-size: 25px;
+  font-style: semibold;
+  font-weight: 600;
 }
 
 /* NAVBAR CONTAINER */
 .navbar {
-  width: 100%;
+  width: 1600px;
+  margin: auto;
   padding: 14px 6%;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,14 +49,16 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 26px;
+  margin-left: 180px;
 }
 
 .nav-links li {
-  color: #d5d5d5;
-  font-size: 14px;
+  color: #F5F9FF;
+  font-size: 16px;
+  margin-left: 26px;
   cursor: pointer;
   transition: 0.2s;
+  font-weight: 500;
 }
 
 .nav-links li:hover {
@@ -71,13 +73,16 @@
 }
 
 .btn-outline {
-  color: white;
+  color: #FFFFFF;
   background: transparent;
   border: 1px solid white;
-  padding: 8px 18px;
-  border-radius: 8px;
+  border-radius: 16px;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 18px;
+  line-height: 28px;
+  width: 156px;
+  height: 46px;
 }
 
 .btn-outline:hover {
@@ -86,14 +91,16 @@
 }
 
 .btn-primary {
-  color: black;
+  color: #1A1B1F;
   background: white;
   border: none;
-  padding: 8px 20px;
-  border-radius: 8px;
+  border-radius: 16px;
   cursor: pointer;
   font-weight: 500;
   transition: 0.2s;
+  font-size: 18px;
+  width: 174px;
+  height: 46px;
 }
 
 .btn-primary:hover {

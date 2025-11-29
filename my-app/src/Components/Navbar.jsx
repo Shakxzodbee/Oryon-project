@@ -2,6 +2,7 @@ import React from "react";
 import "../assets/css/Navbar.css";
 import "../assets/css/herocard.css";
 import Logo from "../assets/img/logo.png";
+import vectorbtn from "../assets/img/vector-btn.png"
 export default function Navbar() {
 
   // SCROLL FUNCTION
@@ -64,8 +65,10 @@ export default function Navbar() {
           <p className="hero-sub">Transforming stock markets into yield engines.</p>
 
           <div className="hero-buttons">
-            <button className="primary-btn">Join the Waitlist</button>
-            <button className="secondary-btn">Watch the Story ➜</button>
+            <button style={{background: "#FFFFFF" , color: "#1A1B1F" , borderRadius: "16px"}} className="primary-btn">Join the Waitlist</button>
+            <button style={{borderRadius: "16px"}} className="secondary-btn">Watch the Story 
+              <img className="vector-btn" src={vectorbtn} alt="" />
+            </button>
           </div>
 
           <p className="scroll-text">SCROLL TO EXPLORE</p>
