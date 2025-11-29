@@ -1,0 +1,23 @@
+.faq-wrapper {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.faq-wrapper h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.faq-subtitle {
+  opacity: 0.7;
+  max-width: 650px;
+  margin: 10px auto 40px auto;
+}
+
+.faq-list {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

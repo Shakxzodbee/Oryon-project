@@ -1,0 +1,94 @@
+.waitlist-wrapper {
+  position: relative;
+  padding: 120px 20px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.waitlist-box {
+  background: white;
+  width: 750px;
+  padding: 60px 40px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.waitlist-box h1 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.subscribe-btn {
+  width: 100%;
+  background: linear-gradient(180deg, #222, #000);
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+.subscribe-btn:hover {
+  opacity: 0.9;
+}
+
+.avatars-text {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatars {
+  display: flex;
+  gap: -10px;
+  margin-bottom: 6px;
+}
+
+.avatars img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -8px;
+}
+
+.coin {
+  position: absolute;
+  width: 130px;
+  filter: drop-shadow(0 20px 25px rgba(0,0,0,0.15));
+}
+
+.coin-left {
+  left: 90px;
+  top: 80px;
+}
+
+.coin-right {
+  right: 90px;
+  top: 80px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .coin { display: none; }
+  .waitlist-box { width: 100%; }
+}

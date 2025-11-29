@@ -1,0 +1,39 @@
+.eco-wrapper {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.eco-wrapper h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.eco-subtitle {
+  max-width: 650px;
+  margin: 10px auto 40px auto;
+  opacity: 0.7;
+  line-height: 1.7;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.eco-item {
+  background: #f8f8f8;
+  padding: 18px 25px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.eco-item:hover {
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}

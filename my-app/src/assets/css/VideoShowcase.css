@@ -1,0 +1,129 @@
+.section {
+  text-align: center;
+  padding: 50px 0;
+  font-family: Inter, sans-serif;
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 600;
+}
+
+.subtitle {
+  max-width: 480px;
+  margin: 10px auto 40px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 1360px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+}
+
+/* MAIN VIDEO */
+.main-video {
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.main-video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: black;
+}
+
+/* SIDE VIDEOS */
+.side-cards {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-card {
+  display: flex;
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.12);
+  gap: 12px;
+  align-items: center;
+}
+
+.thumb-wrapper {
+  position: relative;
+  width: 120px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* PLAY BUTTON — appears in center */
+.play-btn-small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: black;
+  pointer-events: none;
+}
+
+.side-text {
+  text-align: left;
+}
+
+.side-title {
+  font-size: 12px;
+  color: #777;
+}
+
+.side-bold {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.dark {
+  background: #000;
+  color: #fff;
+}
+
+.light {
+  background: #fff;
+  border: 1px solid #000;
+}

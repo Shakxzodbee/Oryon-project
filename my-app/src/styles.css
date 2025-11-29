@@ -1,0 +1,202 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #111;
+}
+
+/* -------------- NAVBAR -------------- */
+
+.navbar {
+  width: 100%;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: white;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* -------------- HERO -------------- */
+
+.hero {
+  position: relative;
+  height: 500px;
+  background: url('/hero-bg.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #fff);
+}
+
+.hero-content {
+  z-index: 5;
+  text-align: center;
+  color: white;
+}
+
+.primary-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.hero-card {
+  position: absolute;
+  right: 80px;
+  bottom: -40px;
+  width: 260px;
+  height: 160px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* -------------- ABOUT -------------- */
+
+.about {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.about-grid {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.about-grid img {
+  width: 350px;
+  border-radius: 12px;
+}
+
+/* -------------- STATS -------------- */
+
+.stats {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.stats-box {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.stats-box div {
+  text-align: center;
+}
+
+/* -------------- MARKET -------------- */
+
+.market {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.market-image {
+  width: 600px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+/* -------------- PROVIDER -------------- */
+
+.provider {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.provider-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+/* -------------- ECOSYSTEM -------------- */
+
+.ecosystem {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.ecosystem-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* -------------- FAQ -------------- */
+
+.faq {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.faq details {
+  width: 600px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* -------------- CALL TO ACTION -------------- */
+
+.cta {
+  text-align: center;
+  padding: 80px 0;
+}
+
+/* -------------- FOOTER -------------- */
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}

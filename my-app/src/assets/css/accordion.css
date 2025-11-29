@@ -1,0 +1,29 @@
+.acc-item {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.acc-header {
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.acc-body {
+  padding: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.acc-icon {
+  font-size: 22px;
+}
