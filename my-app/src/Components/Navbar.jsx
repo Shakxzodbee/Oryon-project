@@ -1,39 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../assets/css/Navbar.css";
 import "../assets/css/herocard.css";
 import Logo from "../assets/img/logo.png";
 import vectorbtn from "../assets/img/vector-btn.png";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  // Navbar scroll holati
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) setScrolled(true);
-      else setScrolled(false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Scroll to section with offset for fixed navbar
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      const yOffset = -80; // Navbar height
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const yOffset = -80;
+      const y =
+        section.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
-  const handleBuy = () => window.open("https://example.com/buy-oryon", "_blank");
+  const handleBuy = () =>
+    window.open("https://example.com/buy-oryon", "_blank");
 
-  const handleBannerClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleBannerClick = () =>
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <div className="high-div">
-      <header className={`header-container ${scrolled ? "scrolled" : ""}`}>
+      <header className="header-container">
         <div className="top-banner" onClick={handleBannerClick}>
           LAUNCHING SOON! UP TO 10% REFERRAL BONUS
         </div>
@@ -58,7 +50,10 @@ export default function Navbar() {
             <button className="btn-outline" onClick={handleBuy}>
               Buy $ORYON
             </button>
-            <button className="btn-primary" onClick={() => scrollToSection("waitlist")}>
+            <button
+              className="btn-primary"
+              onClick={() => scrollToSection("waitlist")}
+            >
               Join the Waitlist
             </button>
           </div>
@@ -87,6 +82,7 @@ export default function Navbar() {
             >
               Join the Waitlist
             </button>
+
             <button
               style={{ borderRadius: "16px" }}
               className="secondary-btn"

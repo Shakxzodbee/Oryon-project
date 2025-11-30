@@ -8,9 +8,9 @@
 }
 
 .header-container {
-     font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
-  position: fixed;
+  /* position: fixed; fixed navbar */
   top: 0;
   z-index: 99;
   background: transparent;
@@ -18,15 +18,11 @@
   color: rgba(255, 255, 255, 1);
 }
 
-.header-container.scrolled {
-  background: #2d2d2d;
-  opacity: 0.7;
-}
 
 /* TOP BANNER */
 .top-banner {
   width: 100%;
-      font-family: 'TT Interfaces', sans-serif;
+  font-family: 'TT Interfaces', sans-serif;
   background: #2d2d2d;
   color: white;
   text-align: center;
@@ -40,7 +36,6 @@
 .top-banner:hover {
   background: #3a3a3a;
 }
-
 
 .navbar {
   width: 100%;
@@ -124,7 +119,7 @@
     display: none;
   }
 }
-/* Navbar & Header */
+
 @media (max-width: 480px) {
   .navbar {
     padding: 10px 4%;
@@ -203,7 +198,7 @@
   }
 }
 
-/* Stats, Eco, FAQ or similar grid sections */
+/* Stats, Eco, FAQ */
 @media (max-width: 480px) {
   .cards-grid,
   .eco-grid,
@@ -237,7 +232,7 @@
   }
 }
 
-/* Cookie box for small screens */
+/* Cookie box */
 @media (max-width: 480px) {
   .cookie-box {
     width: 95%;
