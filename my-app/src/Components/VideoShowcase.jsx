@@ -1,34 +1,34 @@
 import React, { useState, useRef } from "react";
 import "../assets/css/VideoShowcase.css";
 import video1 from "../assets/img/6B4EACEC79664549E10A09A25D1C1293_video_dashinit.mp4";
-
+import video2 from "../assets/img/119440007_353798163817880_5466949638241546424_n.mp4";
 const VideoShowcase = () => {
   const [videos, setVideos] = useState([
     {
       id: 1,
       src: video1,
-      title: "1",
+      title: "What Happens When You Choose Edel",
       line1: "One decision. One app.",
       line2: "A completely new outcome"
     },
     {
       id: 2,
-      src: video1,
-      title: "2",
+      src: video2,
+      title: "What Happens When You Choose Edel",
       line1: "One decision. One app.",
       line2: "A completely new outcome"
     },
     {
       id: 3,
       src: video1,
-      title: "3",
+      title: "What Happens When You Choose Edel",
       line1: "One decision. One app.",
       line2: "A completely new outcome"
     },
     {
       id: 4,
-      src: video1,
-      title: "4",
+      src: video2,
+      title: "What Happens When You Choose Edel",
       line1: "One decision. One app.",
       line2: "A completely new outcome"
     },
@@ -36,7 +36,7 @@ const VideoShowcase = () => {
 
   const [mainVideo, setMainVideo] = useState({
     src: video1,
-    title: "5",
+    title: "What Happens When You Choose Edel",
     line1: "One decision. One app.",
     line2: "A completely new outcome"
   });

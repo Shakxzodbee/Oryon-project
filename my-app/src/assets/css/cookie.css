@@ -1,4 +1,11 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 .cookie-box {
+     font-family: 'SF Pro Display', sans-serif;
 position: fixed;
 bottom: 30px;
 right: 30px;
@@ -12,7 +19,6 @@ animation: fadeIn 0.4s ease;
 height: 235px;
 }
 
-
 @keyframes fadeIn {
 from { opacity: 0; transform: translateY(20px); }
 to { opacity: 1; transform: translateY(0); }
@@ -24,7 +30,9 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 margin-bottom: 10px;
-font-size: 26px;
+}
+.cookie-header  h3{
+  font-size: 26px;
 font-weight: 500;
 font-style: medium;
 line-height: 36.4px;
@@ -163,4 +171,10 @@ cursor: pointer;
     font-size: 12px;
     height: 40px;
   }
+}
+/* Fade-out animation */
+.cookie-box.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }

@@ -1,4 +1,5 @@
 /* GLOBAL RESETS */
+@import url('https://api.fontshare.com/css?f[]=tt-interfaces@400,500,700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +8,14 @@
 }
 
 .header-container {
+     font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 99;
   background: transparent;
   transition: background 0.3s ease;
+  color: rgba(255, 255, 255, 1);
 }
 
 .header-container.scrolled {
@@ -23,11 +26,12 @@
 /* TOP BANNER */
 .top-banner {
   width: 100%;
+      font-family: 'TT Interfaces', sans-serif;
   background: #2d2d2d;
   color: white;
   text-align: center;
   padding: 6px 0;
-  font-size: 12px;
+  font-size: 17px;
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: 0.2s;

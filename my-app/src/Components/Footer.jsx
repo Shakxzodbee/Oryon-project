@@ -53,7 +53,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © Oryon Finance 2025. All Rights Reserved.
+        © Oryon Finance 2026. All Rights Reserved.
       </div>
 
     </footer>

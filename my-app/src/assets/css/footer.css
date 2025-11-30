@@ -1,7 +1,6 @@
 .footer {
   padding: 60px 20px 30px;
   text-align: center;
-  background-color: #f8f8f8; /* agar fon kerak bo'lsa */
 }
 
 .footer-top {
@@ -31,7 +30,7 @@
   gap: 25px;
   font-size: 16px;
   flex-wrap: wrap;
-  justify-content: center; /* mobilda markazlash */
+  justify-content: center;
 }
 
 .footer-links a {
@@ -39,7 +38,9 @@
   color: #333;
   transition: 0.2s;
 }
-
+.footer-links span{
+  cursor: pointer;
+}
 .footer-links a:hover {
   opacity: 0.6;
 }
