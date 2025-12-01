@@ -1,0 +1,93 @@
+/* GENERAL CARD STYLES */
+.general-card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.general-card {
+  background: linear-gradient(180deg, #1f2127 0%, #0f1013 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 520px;
+  height: 240px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.general-card:hover {
+  transform: scale(1.05);
+}
+
+.general-card-header {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.general-card-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.general-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.general-card-tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  border: none;
+}
+
+.general-card-action {
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #ff8a00;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.general-card-action:hover {
+  background: #e52e71;
+  transform: scale(1.05);
+}
+
+/* MEDIA QUERY FOR RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .general-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .general-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+.general-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  justify-content: center; /* Taglarni o'rtaga joylash */
+}

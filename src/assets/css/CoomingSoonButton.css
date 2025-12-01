@@ -1,0 +1,31 @@
+
+.coming-soon-btn {
+  position: relative;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: rgba(26, 27, 31, 1);
+  border: none;
+  border-radius: 16px;
+  width: 420px;
+  height: 56px;
+  cursor: not-allowed;
+  overflow: hidden;
+  margin-top: 35px;
+}
+
+.coming-soon-btn::after {
+  content: "";
+  display: inline-block;
+  margin-left: 5px;
+  width: 1ch;
+  animation: dotsAnimation 1s steps(3, end) infinite;
+}
+
+@keyframes dotsAnimation {
+  0% { content: ""; }
+  33% { content: "."; }
+  66% { content: ".."; }
+  100% { content: "..."; }
+}
