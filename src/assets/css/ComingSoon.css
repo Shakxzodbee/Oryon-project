@@ -1,1 +1,3 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}.coming-soon-container{display:flex;justify-content:center;align-items:center;min-height:100vh;background:linear-gradient(135deg,#6a11cb 0%,#2575fc 100%);color:#fff;text-align:center;padding:20px}.coming-soon-content{max-width:500px}.logo{font-size:48px;margin-bottom:20px}.title{font-size:36px;margin-bottom:10px}.subtitle{font-size:18px;margin-bottom:30px;line-height:1.5}.notify-form{display:flex;flex-direction:column;gap:15px}.notify-form input{padding:12px 15px;border:none;border-radius:6px;font-size:16px}.notify-form button{padding:12px 15px;border:none;border-radius:6px;background-color:#f90;color:#fff;font-size:16px;cursor:pointer;transition:background .3s ease}.notify-form button:hover{background-color:#e68a00}.thanks-message{font-size:18px;color:#fff;margin-top:20px}
+.div-wrap{
+    background: url(../img/b4190abe02e1b19eb16e6d7d889d99f5d6da622d.png) no-repeat top center;
+}

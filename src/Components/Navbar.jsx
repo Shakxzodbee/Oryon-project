@@ -20,9 +20,9 @@ export default function Navbar() {
   const handleBuy = () =>
     window.open("https://example.com/buy-oryon", "_blank");
 
-  const handleBannerClick = () =>
-    window.scrollTo({ top: 0, behavior: "smooth" });
-
+  const handleBannerClick = () => {
+  window.location.href = "/referral";
+};
   return (
     <div className="high-div">
       <header className="header-container">
@@ -48,7 +48,7 @@ export default function Navbar() {
 
           <div className="nav-right">
             <button className="btn-outline" onClick={handleBuy}>
-              Buy $ORYON
+              Request Demo
             </button>
             <button
               className="btn-primary"

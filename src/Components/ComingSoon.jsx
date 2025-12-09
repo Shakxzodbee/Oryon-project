@@ -1,43 +1,24 @@
-import React, { useState } from "react";
-import "../assets/css/ComingSoon.css";
-
-const ComingSoon = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email) return;
-    setSubmitted(true);
-    setEmail("");
-  };
-
+import React from "react";
+import '../assets/css/ComingSoon.css'
+export default function ComingSoon() {
   return (
-    <div className="coming-soon-container" id="buy-section">
-      <div className="coming-soon-content">
-        <h1 className="logo">🚀 MyCompany</h1>
-        <h2 className="title">Coming Soon</h2>
-        <p className="subtitle">
-          We are working hard to launch something amazing. Stay tuned!
-        </p>
+    <div className="page-container">
+      <div className="div-wrap">
 
-        {!submitted ? (
-          <form className="notify-form" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button type="submit">Notify Me</button>
+        <div className="lines" aria-hidden />
+
+        <div className="card" role="region" aria-label="Launching soon sign up">
+          <div className="logo" aria-hidden>◎</div>
+          <div className="launching">Launching Soon!</div>
+          <div className="title">Eon</div>
+          <div className="subtitle">Your Personal Financial Intelligence Platform</div>
+
+          <form onSubmit={(e) => { e.preventDefault(); const email = e.target.email.value; alert("Thanks! " + email + " added to the waitlist."); e.target.reset(); }}>
+            <input className="input" name="email" type="email" placeholder="Input email address" required />
+            <button className="btn" type="submit">Join the Waitlist</button>
           </form>
-        ) : (
-          <p className="thanks-message">Thank you! We'll notify you soon.</p>
-        )}
+        </div>
       </div>
     </div>
   );
-};
-
-export default ComingSoon;
+}

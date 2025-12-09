@@ -16,21 +16,21 @@ import InfoBlockGroup from "../Components/TokenInfoCards";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <CookieCard />
-      <VideoShowcase />
-      <CardSection />
-      <StateseSection />
-      <Ecosystem />
-      <FAQ />
-      <NewSection />
-      <Title />
-      <WhyTokenization />
-      <Chain />
-      <InfoBlockGroup />
-      <AirDrop />
-      <Waitlist />
-      <Footer />
+    <Navbar/>
+    <CookieCard/>
+    <VideoShowcase/>
+    <CardSection/>
+    <StateseSection/>
+    <Ecosystem/>
+    <FAQ/>
+    <NewSection/>
+    <Title/>
+    <WhyTokenization/>
+    <Chain/>
+    <InfoBlockGroup/>
+    <AirDrop/>
+    <Waitlist/>
+    <Footer/>
     </>
   );
 }
